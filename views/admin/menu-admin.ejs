@@ -1,0 +1,38 @@
+<% include ../partials/header2 %>
+	<div class="row">
+		<div class="col-md-12">
+			<p><a href="/panel/admin/new" class="btn btn-primary" role="button">Create New</a></p>
+		</div>
+	</div>
+	<table id="head-tab" class="table table-hover">
+	 	<thead>
+	 		<tr>
+	 			<th>No Id.</th>
+	 			<th>Username</th>
+	 			<th>Edit</th>
+	 			<th>Delete</th>
+	 		</tr>
+	 	</thead>
+	 	<tbody>
+	 		<%users.forEach(function(user){%>
+	 			<%if(user.username === "admin"){%>
+		 			<tr>	
+		 				<td><%=user._id%></td>
+		 				<td><%=user.username%></td>
+	 				</tr>
+	 				<%}else{%>
+	 						<tr>
+		 						<td><%=user._id%></td>
+		 						<td><%=user.username%></td>
+		 						<td><a href="/panel/admin/edit/<%=user._id%>">Edit</a></td>
+		 						<td>
+		 							<form id="delete-form" action="/panel/admin/<%=user._id%>?_method=DELETE" method="POST">
+		 								<button class="btn btn-xs btn-danger">Delete</button>
+		 							</form>
+		 						</td>
+	 						</tr>
+	 				<%}%>
+	 		<%});%>	
+	 	</tbody>
+	</table>
+<% include ../partials/footer-admin%>

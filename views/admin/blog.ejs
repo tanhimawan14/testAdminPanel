@@ -1,0 +1,23 @@
+<%include ../partials/header2%>
+					<div class="row">
+						<div class="col-md-12"><p><a href="/panel/blog/new" class="btn btn-primary" role="button">Create New</a></p></div>
+						<%blogs.forEach(function(blog){%>
+						  	<div class="col-sm-6 col-md-4">
+						    	<div class="thumbnail">
+						      		<img class="blog-admin" src="<%= blog.image %>">
+						      		<div class="caption">
+								        <h3><a class="header" href="/panel/blog/<%=blog.id%>"><%=blog.title%></a></h3>
+								        <div class="meta">
+											<span><%=blog.created.toDateString()%></span>
+										</div>
+								        <p><%-blog.content.substring(0, 50)%>...</p>
+								        <p id="edit-form"><a href="/panel/blog/<%=blog.id%>/edit" class="btn btn-warning" role="button">Edit</a> 
+										<form id="delete-form" action="/panel/blog/<%=blog._id%>?_method=DELETE" method="POST">
+								        	<button class="btn btn-danger" role="button">Delete</button>
+								        </form>
+						    		</div>
+						    	</div>
+						  	</div>
+						<%})%>
+					</div>	
+<%include ../partials/footer-admin%>

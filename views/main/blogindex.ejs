@@ -1,0 +1,36 @@
+<%include ../partials/header%>
+	<div class="jumbotron nomain">
+      <div class="container">
+        <h1 id="blog-title">BLOG</h1>
+      </div>
+    </div>
+	<div class="container fluid">
+		<div class="row">
+			<div id="blog-menu" class="col-md-12">
+				<a class="btn btn-default">All</a>
+				<a class="btn btn-default">Skill</a>
+				<a class="btn btn-default">Work</a>
+				<a class="btn btn-default">Chill</a>
+				
+			</div>
+         		<div class="row placeholders">
+					<div class="row">
+						<%blogs.forEach(function(blog){%>
+						  	<div class="col-sm-6 col-md-3">
+						    	<div class="thumbnail">
+						      		<img class="blog-admin" src="<%= blog.image %>">
+						      		<div class="caption">
+								        <h3><a class="header" href="/blogs/<%=blog.id%>"><%=blog.title%></a></h3>
+								        <div class="meta">
+											<span><%=blog.created.toDateString()%></span>
+										</div>
+								        <p><%-blog.content.substring(0, 50)%>...</p>
+						    		</div>
+						    	</div>
+						  	</div>
+						<%})%>
+					</div>	
+         		</div>
+      	</div>
+    </div>
+<%include ../partials/footer%>

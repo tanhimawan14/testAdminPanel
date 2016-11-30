@@ -1,0 +1,107 @@
+body {
+  min-height: 100vh;
+  padding-top: 50px;
+}
+/*HEADER*/
+nav.navbar.navbar-default.navbar-fixed-top a{
+	color: black;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top {
+	background-color: rgba(256,256,256,1);
+	border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+/*HOME*/
+#main-image {
+	height:95vh;
+	margin-bottom: 0px;
+	background-image: url("/images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.container {
+	color: white;
+}
+#section-jumbotron {
+	margin: 0 auto;
+	padding:40px;
+	position: relative;
+	text-align: center;
+}
+#section-jumbotron p {
+	margin-top: 30px;
+	line-height: 1.8em;
+}
+.marketing {
+	color: black;
+	margin-top: 40px;
+}
+#practice-title {
+	background-color: gray;
+	color: white;
+	margin:0;
+}
+#practice-title .col-lg-12 {
+	text-align: center;
+	padding: 30px;
+}
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/*BLOG INDEX*/
+#blog-title {
+	text-align: center;
+	/*padding-top: 2.5%;*/
+}
+
+.nomain {
+  	padding-bottom: 20px;
+  	height:200px;
+}
+
+.thumbnail img{
+  width: 100%;
+}
+
+img.blog-admin {
+  max-height: 30vh;
+  min-height: 30vh;
+}
+
+.thumbnail {
+  padding: 0;
+}
+
+.thumbnail .caption-full {
+  padding: 9px;
+  text-align: left;
+}
+
+#blog-menu {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+/*ADMIN LOGIN*/
+
+.row.row-admin {
+	margin-top: 70px;
+	text-align: center;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.container.login {
+	width: 30%;
+	margin: 25px auto;
+}
